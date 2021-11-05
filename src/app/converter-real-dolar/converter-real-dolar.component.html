@@ -1,0 +1,32 @@
+<div class="container pt-4">
+  <div class="row">
+    <div class="col-4">
+      <div class="border border-secondary border-3 rounded p-4">
+        <h6>Digite o valor em Reais para Dolar</h6>
+        <hr/>
+        <div class="formulario">
+          <form [formGroup]="formulario" (ngSubmit)="Converter()">
+            <div class="form-group">
+              <input
+                type="number"
+                class="form-control form-control-sm" placeholder="Valor"
+                formControlName="valor"
+              />
+            </div>
+
+            <div class="">
+              <button type="submit" class="btn btn-outline-secondary btn-sm">
+                Converter
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-4" *ngIf="visualizarVar">
+      <h6>Valor convertido</h6>
+      <hr/>
+      <h1 class="text-primary">{{valorConvert}}</h1>
+    </div>
+  </div>
+</div>
