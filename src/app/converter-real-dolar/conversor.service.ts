@@ -11,6 +11,10 @@ export class ConversorService {
   FazerConversao(): Observable<any>{
     const url = "https://api.exchangerate.host/convert?from=USD&to=BRL&amount=100"
     return this.http.get<any>(url);
+    // converterMoedas(moedaOrigem:String, moedaDestino:String, valor: number): Observable<any>{
+    //
+    //   return this.http.get("https://api.exchangerate.host/convert?from="+moedaOrigem+"&to="+moedaDestino+"&amount="+valor);
+    // }
 
   }
 }
