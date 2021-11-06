@@ -26,9 +26,11 @@ export class ConverterRealDolarComponent implements OnInit {
     const valor = this.formulario.value.valor;
     this.visualizarVar = true;
     this.conversorService.FazerConversao().subscribe(resultado => {
-      this.valorConvert = Number((valor * resultado.rates.BRL).toFixed(2));
+      this.valorConvert = Number(valor * resultado.result.toFixed(2))
+
     })
 
   }
+
 
 }
